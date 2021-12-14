@@ -1,0 +1,115 @@
+.hotel-container{
+    background-image: url('https://www.teahub.io/photos/full/6-63475_fast-food-background-hd.jpg');
+    overflow-x:hidden ;
+    display: flex;
+    flex-direction: column;
+    .menu-bar {
+        background: rgb(251, 255, 255);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding:2px 8px 2px 8px;
+        .username_container {
+            font-size: 28px;
+            padding-left: 3%;
+            color: rgb(230, 24, 24);
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .filters {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            app-search-bar {
+                margin-right: 35px;
+            }
+
+        }
+
+    }
+
+    @media screen and (min-width:720px){
+        .filters{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    @media screen and (min-width:768px){
+        .menu-bar{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .hotel-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        width:100%;
+        padding: 10px;
+        .hotel {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width:auto;
+        }
+
+        @media screen and (min-width:768px){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+        }
+    }
+    .empty-search {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+h3 {
+    margin: 0 !important;
+}
+
+::ng-deep .swal2-title {
+    font-size: 30px !important;
+    font-weight: 600 !important;
+}
+
+@media only screen and (max-width: 600px)  {
+    .menu-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .tagline {
+            font-size: 20px !important;
+        }
+
+    }
+
+    .hotel-cards {
+        flex-direction: column;
+    }
+}
+
+
+.map_location{
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+    width:auto;
+}
+
+.map_image{
+    width:40px;
+    height:40px
+}

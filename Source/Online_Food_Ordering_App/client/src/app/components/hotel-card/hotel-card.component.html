@@ -1,0 +1,12 @@
+<mat-card> <!-- Predefined mat-card is used-->
+  <mat-card-header> <!-- Header mat-card is used -->
+    <mat-card-title  title="{{nameOfHotel}}">{{nameOfHotel}}</mat-card-title> <!-- matcard for title is used -->
+    <mat-card-subtitle  title="{{dishes}}">{{dishes}}</mat-card-subtitle><!-- mat card for subtitle is used-->
+  </mat-card-header>
+  <img mat-card-image width="100" height="100" src="{{hotelThumbnail}}" alt="Restaurants {{nameOfHotel}}"> <!-- restaurant image is used -->
+  <mat-card-content> <!-- content matcard is used to wrap all the content-->
+    <p>Reviews: {{review}}</p> <!-- paragraph for reviews is used-->
+    <p> <span class="rating-star">{{'★'.repeat(math.round(rating))}}</span></p> <!--  displaying using the star-->
+  </mat-card-content><!-- closing the mat-card-content -->
+</mat-card>
+

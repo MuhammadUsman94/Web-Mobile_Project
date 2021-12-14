@@ -1,0 +1,28 @@
+<app-nav-bar [userName]="userName"></app-nav-bar> <!-- app-nav-bar selector is used to display the navbar to the default hotel page-->
+
+<div class="hotel-container"> <!-- main containter div is used to wrap the search and dropdown selectors  -->
+    <div class="menu-bar"> <!-- second container to align them as a menu bar -->
+        <h1 class="username_container"><b>Welcome, {{userName}}</b></h1>      
+        <div class="filters"> <!-- container to wrap and align search and dropdown -->
+            <app-search-bar (eventsearch)="queryForSearch($event)"></app-search-bar> <!-- app-search-bar selector is used to display the search to the default hotel page-->
+            <app-dropdown [valSelect]="valSelect" [sortOptions]="sortOptions" (sortEvent)="hotelsToSort($event)"></app-dropdown> <!-- app-dropdown selector is used to display the sort to the default hotel page-->
+        </div>
+    </div>
+
+    <div class="hotel-cards" [class]="{'empty-search': !hotels.length}" *ngIf="!hotels.length"> <!--containter div is used for the search result display-->
+        <div class="empty-hotel"> <!-- wrap the search result content -->
+            <mat-spinner *ngIf="!hotelsConstant.length"></mat-spinner> <!-- search result inputs is displayed if present and check used ngIf condition check -->
+            <h3 *ngIf="hotelsConstant.length"> <!-- defined no result message is displayed in the home page using h3 tag-->
+                No Hotels found!
+            </h3>
+        </div>
+    </div>
+
+    <div class="hotel-cards"> <!-- container is used to wrap all the hotels from the database-->
+        <div *ngFor="let hotel of hotels" class="hotel"> <!-- for loop is used to extract and wrap all the hotels in the card -->
+            <app-hotel-card [hotelName]="hotel.name" [hotelThumbnail]="hotel.thumbnail_image" [hotelImage]="hotel.feature_image"  
+            [cuisines]="hotel.cuisines" [rating]="hotel.rating" [review]="hotel.reviews" (click)="goToHotel(hotel)" ></app-hotel-card> <!-- app-hotel-card selector is used to display the hotel cards to the default hotel page-->
+        </div>
+    </div>
+
+</div>

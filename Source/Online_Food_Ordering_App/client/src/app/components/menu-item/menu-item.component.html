@@ -1,0 +1,16 @@
+<div> <!-- div tag is used to wrap all the data -->
+    <h3 class="card-header"> Pick your favourite dish</h3> <!-- H3 tag is used for the text-->
+    <mat-card class="card" *ngFor="let card of hotel.card"> <!-- for loop is used to get all the used added cart-->
+        <mat-card-header> <!-- mat-card-header is used -->
+            <mat-card-title>{{card.name}}</mat-card-title> <!-- predefined mat-card-title is used -->
+        </mat-card-header> <!-- closing tag -->
+        <mat-card-content> <!-- closing tag-->
+
+        <mat-card-actions> <!-- predefined mat-card-actions tag is used-->
+            <span style="color: red; font-size: large; font-weight: bold;">{{'\u0024'}} {{card.price}}</span> <<!-- span is used to display the total added cart value with dollar symbol -->
+            <button (click)="cartAddition(card)"> <!-- Button to add to card-->
+                Add to Cart <!-- text on the button -->
+            </button><!-- closing tag-->
+        </mat-card-actions><!-- closing tag-->
+    </mat-card><!-- closing tag-->
+</div><!-- closing tag-->

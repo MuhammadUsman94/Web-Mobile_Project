@@ -1,0 +1,15 @@
+::ng-deep .swal2-title {
+    font-size: 30px !important;
+    font-weight: 600 !important;
+}
+
+::ng-deep .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80') !important;
+    background-size: cover;
+    background-position: center;
+}
+
+::ng-deep .swal2-icon.swal2-info {
+    border-color: #e3f3e7!important;
+    color: #e3f3e7 !important;
+}

@@ -1,0 +1,8 @@
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label><h5 style="font-weight: bold; font-size: large; color:black;">Restaurants</h5></mat-label>
+      <input matInput placeholder="Search" type="text" [(ngModel)]="hotelSearch" (ngModelChange)="queryForSearch($event)" autocomplete="off" >
+      <mat-icon matSuffix>close</mat-icon>
+    </mat-form-field>
+  </p>
+

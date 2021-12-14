@@ -1,0 +1,18 @@
+
+
+
+<div  *ngFor="let saveMenu of saveMenus"> <!-- for loop is used to retrive the data presnet when it is saved -->
+    <h4>{{saveMenu.name}}</h4> <!--  h4 heading tag is used-->
+    <div class="price-input"> <!-- wraping up all the price -->
+        <mat-form-field > <!-- form field tag is used-->
+            <mat-label>Quantity</mat-label>  <!-- matlabel is used for quantity text-->
+            <input matInput type="text" [(ngModel)]="saveMenu.quantity"> <!-- ngmodel is used to send the quantity to the js file-->
+        </mat-form-field>
+        <button mat-mini-fab color="blue" (click)="quanAddition(saveMenu)"><!-- when the user clicks on the addition the following method is executed-->
+            <mat-icon>add</mat-icon> <!-- ICON ADDITION -->
+        </button>
+    </div>
+    <button  color="warn" class="remove-menu" (click)="itemDeletion(saveMenu)"> <!-- when the user clicks on the addition the following method is executed-->
+        Remove Item
+    </button>
+</div>
